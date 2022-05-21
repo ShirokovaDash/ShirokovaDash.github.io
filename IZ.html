@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Индивидуальные задания</title>
+</head>
+<style>
+    body{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .button{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: #547be7;
+        color:rgb(0, 0, 0);
+        border: 2px solid #100493;
+    }
+    .button:hover{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: #858500;
+        color:rgb(0, 0, 0);
+        border: 2px solid #444400;
+    }
+</style>
+<script>
+    function Max() {
+        if(_i1.value > _i2.value)
+            alert(_i1.value);
+        if(_i2.value > _i1.value)
+            alert(_i2.value);
+        if(_i2.value == _i1.value)
+            alert("Они равны");
+    }
+
+    function sayMyName() {
+        let name = "Дарья";
+        let admin;
+        admin = name;
+        alert(admin);
+    }
+
+    function oldyAreHere() {
+        var year = prompt('Сколько вам лет?','Введите сюда ваш возраст');
+        var tochno = confirm('Вы уверены, что вам '+year+'?');
+        if(!tochno)
+            oldyAreHere();
+        if(tochno)
+            alert('Принято, выполняющему '+year+' лет');
+    }
+</script>
+
+<body>
+    <div id="forma">
+        <h1>Индивидуальное задание №1</h1>
+        <input type="text" size="20" onchange="Check()" id = "_i1">
+        <input type="text" size="20" onchange="Check()" id = "_i2">
+        <div>
+            <input type="submit" class="button" value="Проверить" onclick="Max()">
+        </div>
+        
+        <h1>Индивидуальное задание №2</h1>
+        <input type="submit" class="button" value="Спросить имя" onclick="sayMyName()">
+
+        <h1>Индивидуальное задание №3</h1>
+        <input type="submit" class="button" value="Спросить возрост" onclick="oldyAreHere()">
+    </div>
+</body>
+</html>
